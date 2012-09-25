@@ -1,0 +1,13 @@
+BOOTSTRAP_DIR = ../bootstrap
+PUBLIC_DIR = ../public
+LESSC ?= `which lessc`
+
+#
+# BUILD SIMPLE BOOTSTRAP DIRECTORY
+# recess & uglifyjs are required
+#
+
+css:
+	${LESSC} --yui-compress \
+		bootstrap.less > ../min/agendav.min.css
+
