@@ -11,3 +11,8 @@ css:
 	${LESSC} --yui-compress \
 		bootstrap.less > ../min/agendav.min.css
 
+watch:
+	 echo "Watching less files..."; \
+	 watchr -d -e "watch('.*\.less') { system 'make' }"
+
+.PHONY: watch
