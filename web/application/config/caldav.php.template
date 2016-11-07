@@ -26,7 +26,7 @@
  *  DAViCal: $config['caldav_http_auth_method'] = CURLAUTH_BASIC;
  */
 
-$config['caldav_http_auth_method'] = null;
+$config['caldav_http_auth_method'] = CURLAUTH_BASIC;
 
 
 /*******************
@@ -44,7 +44,7 @@ $config['caldav_http_auth_method'] = null;
  * - Apple Calendar Server: https://host/calendars/users/%u/
  */
 
-$config['caldav_principal_url'] = 'https://caldav.server/caldav.php/%u/';
+$config['caldav_principal_url'] = 'http://mydavical.dev/caldav.php/%u/';
 
 /*
  * CalDAV calendars URL template
@@ -59,7 +59,7 @@ $config['caldav_principal_url'] = 'https://caldav.server/caldav.php/%u/';
  * - Apple Calendar Server: https://host/calendars/users/%s/
  */
 
-$config['caldav_calendar_url'] = 'https://caldav.server/caldav.php/%s/';
+$config['caldav_calendar_url'] = 'http://mydavical.dev/caldav.php/%s/';
 
 /*
  * Public CalDAV URL for calendars
@@ -69,7 +69,7 @@ $config['caldav_calendar_url'] = 'https://caldav.server/caldav.php/%s/';
  * Please, add trailing slash.
  * Will be shown to users only when 'show_public_caldav_url' is enabled
  */
-$config['public_caldav_url'] = 'https://public.server/caldav.php/%s/';
+$config['public_caldav_url'] = 'http://mydavical.dev/caldav.php/%s/';
 
 /*******************
  * Share options   *
@@ -87,15 +87,15 @@ $config['enable_calendar_sharing'] = TRUE;
 
 // Default permissions for calendar owner
 $config['owner_permissions'] = array('all', 'read', 'unlock', 'read-acl',
-		'read-current-user-privilege-set', 'write-acl', 'C:read-free-busy',
-		'write', 'write-properties', 'write-content', 'bind', 'unbind');
+	'read-current-user-privilege-set', 'write-acl', 'C:read-free-busy',
+	'write', 'write-properties', 'write-content', 'bind', 'unbind');
 
 // Permissions for sharing calendars using the 'read' profile
 $config['read_profile_permissions'] = array('C:read-free-busy', 'read');
 
 // Permissions for sharing calendars using the 'read+write' profile
 $config['read_write_profile_permissions'] = array('C:read-free-busy',
-		'read', 'write');
+	'read', 'write');
 
 // Authenticated users default permissions
 $config['default_permissions'] = array('C:read-free-busy');

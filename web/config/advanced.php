@@ -27,7 +27,7 @@ $config['index_page'] = 'index.php';
 | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
 |
 */
-$config['uri_protocol']	= 'AUTO';
+$config['uri_protocol']	= 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------
@@ -281,4 +281,4 @@ $config['sess_time_to_update']	= 300;
 | Use a full octal permission.
 | Example: 0644, 0666
 */
-$config['log_create_permissions'] = 0640;
+$config['log_create_permissions'] = 0644;

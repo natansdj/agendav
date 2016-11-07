@@ -20,7 +20,7 @@ require_once('defaults.php');
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://agendav.dev/';
 
 
 /*
@@ -40,7 +40,7 @@ $config['base_url']	= '';
 |  * DEBUG: CodeIgniter internal debug. Do not enable unless you know what
 |           you're doing
 */
-$config['show_in_log']= array('ERROR','INFO','AUTHERR', 'AUTHOK'); 
+$config['show_in_log']= array('ERROR','INFO','AUTHERR', 'AUTHOK', 'INTERNALS', 'DEBUG');
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ $config['show_in_log']= array('ERROR','INFO','AUTHERR', 'AUTHOK');
 | Use a full server path with trailing slash.
 |
 */
-$config['log_path'] = '';
+$config['log_path'] = dirname(__FILE__) . '/../../logs/log.txt  ';
 
 /*
 |--------------------------------------------------------------------------
@@ -226,9 +226,9 @@ $config['format_full_date'] = '%a %e %B %Y';
 |
 */
 
-$config['format_column_month'] = 'ddd'; 
-$config['format_column_week'] = 'ddd d'; 
-$config['format_column_day'] = 'ddd d MMMM'; 
+$config['format_column_month'] = 'ddd';
+$config['format_column_week'] = 'ddd d';
+$config['format_column_day'] = 'ddd d MMMM';
 $config['format_column_table'] = 'MMM d, yyyy';
 
 $config['format_title_month'] = 'MMMM yyyy';
@@ -270,18 +270,18 @@ $config['default_timezone'] = 'Europe/Madrid';
 */
 
 $config['calendar_colors'] = array(
-		'D4EAEF',
-		'3A89C9',
-		'107FC9',
-		'FAC5C0',
-		'FF4E50',
-		'BD3737',
-		'C9DF8A',
-		'77AB59',
-		'36802D',
-		'F8F087',
-		'E6D5C1',
-		'3E4147',
+	'D4EAEF',
+	'3A89C9',
+	'107FC9',
+	'FAC5C0',
+	'FF4E50',
+	'BD3737',
+	'C9DF8A',
+	'77AB59',
+	'36802D',
+	'F8F087',
+	'E6D5C1',
+	'3E4147',
 );
 
 
