@@ -1,0 +1,29 @@
+#!/bin/bash
+
+PHPCLI=`which php-cli 2>/dev/null`
+if [ "x$PHPCLI" == "x" ]; then
+	PHPCLI=`which php 2>/dev/null`
+fi
+
+# Find path to web/public dir
+realpath() {
+	[[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+PUBLIC_DIR=`realpath "$0"|sed 's_agendavcli\$__g'`../web/public
+
+echo "${PHPCLI}"
+echo "${PUBLIC_DIR}"
+echo "${1-}"
+
+$PHPCLI "${PUBLIC_DIR}"/index.php cli ${1-}
+
+###
+# those line above did :
+###
+#CREATE TABLE prefs (
+#                        username VARCHAR(255) NOT NULL,
+#                        options TEXT NOT NULL,
+#                        PRIMARY KEY(username)
+#                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+###
